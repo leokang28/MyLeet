@@ -16,15 +16,13 @@ var numIslands = function (grid) {
         const queue = []
         queue.push([i, j])
         while (queue.length) {
-          const length = queue.length
-          for (let k = 0; k < length; k++) {
-            const [_r, _c] = queue.shift()
-            grid[_r][_c] = '2'
-            check(_r - 1, _c, queue, grid)
-            check(_r + 1, _c, queue, grid)
-            check(_r, _c - 1, queue, grid)
-            check(_r, _c + 1, queue, grid)
-          }
+          const [_r, _c] = queue.shift()
+          grid[_r][_c] = '2'
+          check(_r - 1, _c, queue, grid)
+          check(_r + 1, _c, queue, grid)
+          check(_r, _c - 1, queue, grid)
+          check(_r, _c + 1, queue, grid)
+          // }
         }
       }
     }
