@@ -21,11 +21,24 @@ var oddEvenList = function (head) {
 };
 
 const list = new LinkList()
-list.addAtHead(5)
-list.addAtHead(4)
-list.addAtHead(3)
+// list.addAtHead(6)
+// list.addAtHead(5)
+// list.addAtHead(4)
+// list.addAtHead(3)
 list.addAtHead(2)
 list.addAtHead(1)
-console.log(list.values())
-oddEvenList(list.head)
-console.log(list.values())
+// console.log(list.values())
+// oddEvenList(list.head)
+// console.log(list.values())
+var middleNode = function (head) {
+  let one_step = head
+  let two_step = head
+  while (two_step && two_step.next) {
+    two_step = two_step.next.next
+    one_step = one_step.next
+  }
+  return one_step
+};
+
+let node = middleNode(list.head)
+console.log(node)
