@@ -1,2 +1,2 @@
 # MyLeet
-leetcode probloms code
+for leetcode
